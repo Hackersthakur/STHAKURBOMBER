@@ -650,7 +650,7 @@ def selectnode(mode="sms"):
         result = "5111.11111111sthakur00"
         sec = 23*2000/9
         sec = str(sec)
-        sec = result[-:21]
+        sec = result[-10:21]
         
 
 
