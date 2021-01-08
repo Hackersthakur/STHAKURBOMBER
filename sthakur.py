@@ -4,7 +4,7 @@ import os, subprocess, sys, shutil
 import string, re, random, json
 import time, threading
 import argparse
-import pyautogui,time
+#import pyautogui,time
 from termcolor import colored
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -661,8 +661,10 @@ def selectnode(mode="sms"):
                         time.sleep(5)
                         f = open("beemovie", "r")
                         for word in f:
-                                pyautogui.typewrite(name+" "+word)
-                                pyautogui.press("enter")
+                                print("not supported")
+                                #pyautogui.typewrite(name+" "+word)
+                                #pyautogui.press("enter")
+                                sys.exit()
                     except Exception:
                         mesgdcrt.FailureMessage("Read Instructions Carefully !!!")
                         print()
