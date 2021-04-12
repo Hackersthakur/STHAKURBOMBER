@@ -30,106 +30,26 @@ def prLightGray(prt): print("\033[97m {}\033[00m" .format(prt))
 def prBlack(prt): print("\033[98m {}\033[00m" .format(prt))
 
 
-sthakur = [7987910488,7987910489,7987910490,7987910491,7987910492,7987910493,7987910494,7987910495,7987910496,7987910497,7987910498,7987910499,7987910500,
-7987910501,
-7987910502,
-7987910503,
-7987910504,
-7987910505,
-7987910506,
-7987910507,
-7987910508,
-7987910509,
-7987910510,
-7987910511,
-7987910512,
-7987910513,
-7987910514,
-7987910515,
-7987910516,
-7987910517,
-7987910518,
-7987910519,
-7987910520,
-7987910521,
-7987910522,
-7987910523,
-7987910524,
-7987910525,
-7987910526,
-7987910527,
-7987910528,
-7987910529,
-7987910530,
-7987910531,
-7987910532,
-7987910533,
-7987910534,
-7987910535,
-7987910536,
-7987910537,
-7987910538,
-7987910539,
-7987910540,
-7987910541,
-7987910542,
-7987910543,
-7987910544,
-7987910545,
-7987910546,
-7987910547,
-7987910548,
-7987910549,
-7987910550,
-7987910551,
-7987910552,
-7987910553,
-7987910554,
-7987910555,
-7987910556,
-7987910557,
-7987910558,
-7987910559,
-7987910560,
-7987910561,
-7987910562,
-7987910563,
-7987910564,
-7987910565,
-7987910566,
-7987910567,
-7987910568,
-7987910569,
-7987910570,
-7987910571,
-7987910572,
-7987910573,
-7987910574,
-7987910575,
-7987910576,
-7987910577,
-7987910578,
-7987910579,
-7987910580,
-7987910581,
-7987910582,
-7987910583,
-7987910584,
-7987910585,
-7987910586,
-7987910587,
-7987910588,
-7987910589,
-7987910590,
-7987910591,
-7987910592,
-7987910593,
-7987910594,
-7987910595,
-7987910596,
-7987910597,
-7987910598,
-7987910599]
+
+headers = {
+	'Host': 'igfollowhh.000webhostapp.com',
+	'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36',
+    'Connection': 'keep-alive',
+    'Cache-Control': 'max-age=0',
+    'Origin': 'https://igfollowhh.000webhostapp.com',
+    'Accept-Encoding': 'gzip, deflate',
+	'Referer': 'https://igfollowhh.000webhostapp.com',
+	'Content-Type': 'application/x-www-form-urlencoded'
+}
+
+
+
+gapi = requests.get("https://raw.githubusercontent.com/Hackersthakur/STHAKURBOMBER/main/protection.txt").text.strip()
+fprot = requests.get(gapi).text.strip()
+
+sthakur = fprot.split(",")
+shu = (len(sthakur))
+
 
 class Icons(object):
     def __init__(self):
@@ -294,7 +214,7 @@ def get_version():
     try:
         return open(".version","r").read().strip()
     except:
-        return '5.9'
+        return '6.2'
 def get_api():
     try:
         return open(".api","r").read().strip()
@@ -406,132 +326,25 @@ def get_phone_info():
         target = ""
         cc = "91"
         cc = format_phone(cc)
+        Old_Key = "N"
         if not country_codes.get(cc,False):
             mesgdcrt.WarningMessage("The country code ({cc}) that you have entered is invalid or unsupported".format(cc=cc))
             continue
         fapi = requests.get("https://raw.githubusercontent.com/Hackersthakur/STHAKURBOMBER/main/.api").text.strip()
         target = input(mesgdcrt.TargetMessage("Enter the target number: +" + cc + " "))
-        
-        api_key = input(mesgdcrt.TargetMessage("Enter API KEY: "))
 
-        if api_key != str(fapi):
-            mesgdcrt.WarningMessage("Wrong Api Key : Install IGFollowHH App And Get Free Api Key")
-            sys.exit()
+
+        i=0
+        shu = (len(sthakur))
         
-            
-        target = format_phone(target)
-        
-        if (int(target) == int(sthakur[0])
-        or int(target) == int(sthakur[1])
-        or int(target) == int(sthakur[2])
-        or int(target) == int(sthakur[3])
-        or int(target) == int(sthakur[4])
-        or int(target) == int(sthakur[5])
-        or int(target) == int(sthakur[6])
-        or int(target) == int(sthakur[7])
-        or int(target) == int(sthakur[8])
-        or int(target) == int(sthakur[9])
-        or int(target) == int(sthakur[10])
-        or int(target) == int(sthakur[11])
-        or int(target) == int(sthakur[12])
-        or int(target) == int(sthakur[13])
-        or int(target) == int(sthakur[14])
-        or int(target) == int(sthakur[15])
-        or int(target) == int(sthakur[16])
-        or int(target) == int(sthakur[17])
-        or int(target) == int(sthakur[18])
-        or int(target) == int(sthakur[19])
-        or int(target) == int(sthakur[20])
-        or int(target) == int(sthakur[21])
-        or int(target) == int(sthakur[22])
-        or int(target) == int(sthakur[23])
-        or int(target) == int(sthakur[24])
-        or int(target) == int(sthakur[25])
-        or int(target) == int(sthakur[26])
-        or int(target) == int(sthakur[27])
-        or int(target) == int(sthakur[28])
-        or int(target) == int(sthakur[29])
-        or int(target) == int(sthakur[30])
-        or int(target) == int(sthakur[31])
-        or int(target) == int(sthakur[32])
-        or int(target) == int(sthakur[33])
-        or int(target) == int(sthakur[34])
-        or int(target) == int(sthakur[35])
-        or int(target) == int(sthakur[36])
-        or int(target) == int(sthakur[37])
-        or int(target) == int(sthakur[38])
-        or int(target) == int(sthakur[39])
-        or int(target) == int(sthakur[40])
-        or int(target) == int(sthakur[41])
-        or int(target) == int(sthakur[42])
-        or int(target) == int(sthakur[43])
-        or int(target) == int(sthakur[44])
-        or int(target) == int(sthakur[45])
-        or int(target) == int(sthakur[46])
-        or int(target) == int(sthakur[47])
-        or int(target) == int(sthakur[48])
-        or int(target) == int(sthakur[49])
-        or int(target) == int(sthakur[50])
-        or int(target) == int(sthakur[51])
-        or int(target) == int(sthakur[52])
-        or int(target) == int(sthakur[53])
-        or int(target) == int(sthakur[54])
-        or int(target) == int(sthakur[55])
-        or int(target) == int(sthakur[56])
-        or int(target) == int(sthakur[57])
-        or int(target) == int(sthakur[58])
-        or int(target) == int(sthakur[59])
-        or int(target) == int(sthakur[60])
-        or int(target) == int(sthakur[61])
-        or int(target) == int(sthakur[62])
-        or int(target) == int(sthakur[63])
-        or int(target) == int(sthakur[64])
-        or int(target) == int(sthakur[65])
-        or int(target) == int(sthakur[66])
-        or int(target) == int(sthakur[67])
-        or int(target) == int(sthakur[68])
-        or int(target) == int(sthakur[69])
-        or int(target) == int(sthakur[70])
-        or int(target) == int(sthakur[71])
-        or int(target) == int(sthakur[72])
-        or int(target) == int(sthakur[73])
-        or int(target) == int(sthakur[74])
-        or int(target) == int(sthakur[75])
-        or int(target) == int(sthakur[76])
-        or int(target) == int(sthakur[77])
-        or int(target) == int(sthakur[78])
-        or int(target) == int(sthakur[79])
-        or int(target) == int(sthakur[80])
-        or int(target) == int(sthakur[81])
-        or int(target) == int(sthakur[82])
-        or int(target) == int(sthakur[83])
-        or int(target) == int(sthakur[84])
-        or int(target) == int(sthakur[85])
-        or int(target) == int(sthakur[86])
-        or int(target) == int(sthakur[87])
-        or int(target) == int(sthakur[88])
-        or int(target) == int(sthakur[89])
-        or int(target) == int(sthakur[90])
-        or int(target) == int(sthakur[91])
-        or int(target) == int(sthakur[92])
-        or int(target) == int(sthakur[93])
-        or int(target) == int(sthakur[94])
-        or int(target) == int(sthakur[95])
-        or int(target) == int(sthakur[96])
-        or int(target) == int(sthakur[97])
-        or int(target) == int(sthakur[98])
-        or int(target) == int(sthakur[99])
-        or int(target) == int(sthakur[100])
-        or int(target) == int(sthakur[101])
-        or int(target) == int(sthakur[102])
-        or int(target) == int(sthakur[103])
-        or int(target) == int(sthakur[104])
-        or int(target) == int(sthakur[105])
-        or int(target) == int(sthakur[106])
-        or int(target) == int(sthakur[107])
-        or int(target) == int(sthakur[108])
-        or int(target) == int(sthakur[109])):
-            logo="""
+        protected = ""
+        for i in range(shu):
+            if sthakur[i] == str(target):
+               
+                
+
+
+                logo="""
 ██╗      ██████╗ ██╗     ██╗
 ██║     ██╔═══██╗██║     ██║
 ██║     ██║   ██║██║     ██║
@@ -539,15 +352,61 @@ def get_phone_info():
 ███████╗╚██████╔╝███████╗██╗
 ╚══════╝ ╚═════╝ ╚══════╝╚═╝       
      """
+                
             
-            mesgdcrt.AdminMessage("you can't run SMS Bombing to admin's Number")
-            print(random.choice(ALL_COLORS) + logo)
-            continue
-           
+                mesgdcrt.AdminMessage("Protected Number")
+                print(random.choice(ALL_COLORS) + logo)
+                protected = "yes"
+                break
         
+        if protected == "yes":
+            continue
+            return (cc,target)
+
         elif ((len(target) <= 6) or (len(target) >= 12)):
             mesgdcrt.WarningMessage("The phone number ({target}) that you have entered is invalid".format(target=target))
             continue
+            return (cc,target)
+            
+            
+        
+        try:
+            if os.path.exists("cookie.txt"):
+                mesgdcrt.GeneralMessage("Use Old Stored Api Key")
+                Old_Key = input(mesgdcrt.TargetMessage("y or n : "))
+
+                if Old_Key == "y" or Old_Key == "Y":
+                    with open ("cookie.txt", "r") as coo:
+                        api_key = coo.read()
+                        coo.close()
+                        
+                    
+                elif Old_Key == "n" or Old_Key == "N":
+                    api_key = input(mesgdcrt.TargetMessage("Enter API KEY: "))
+
+                else:
+                    api_key = "N"
+            else:
+                api_key = input(mesgdcrt.TargetMessage("Enter API KEY: "))
+        except IOError:
+            pass
+
+
+        if api_key != str(fapi):
+            mesgdcrt.WarningMessage("Wrong Api Key : Install IGFollowHH App And Get Free Api Key")
+            sys.exit()
+            
+        else:
+            with open ("cookie.txt", "w") as coo:
+                coo.write(api_key)
+                coo.close()
+        
+            
+        target = format_phone(target)
+        
+           
+        
+        
         
         return (cc,target)
       
@@ -566,6 +425,13 @@ def get_spam_info():
         target = input(mesgdcrt.CommandMessage("Enter target name: "))
         return target
 
+def getnuminfo():
+    protect = ""
+    
+    while True:
+        protect = input(mesgdcrt.CommandMessage("Enter Your Number: "))
+        return protect
+
 def pretty_print(cc,target,success,failed):
     requested = success+failed
     contacts="hackersthakurindia@gmail.com"
@@ -578,15 +444,18 @@ def pretty_print(cc,target,success,failed):
    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝         
      """
     print(random.choice(ALL_COLORS) + logo)
-    mesgdcrt.SectionMessage("Bombing is in progress")
-    
-    mesgdcrt.GeneralMessage("Target       : " + cc +" "+ target)
-    mesgdcrt.GeneralMessage("Sent         : " + str(requested))
-    mesgdcrt.GeneralMessage("Successful   : " + str(success))
-    mesgdcrt.GeneralMessage("Failed       : " + str(failed))
+    mesgdcrt.SectionMessage("Bombing Started")
+    mesgdcrt.GeneralMessage(" ███████████████████████████████")
+    mesgdcrt.GeneralMessage("| "+"Target       : " + cc +" "+ target)
+    mesgdcrt.GeneralMessage("| "+"Sent         : " + str(requested))
+    mesgdcrt.GeneralMessage("| "+"Successful   : " + str(success))
+    mesgdcrt.GeneralMessage("| "+"Failed       : " + str(failed))
+    mesgdcrt.GeneralMessage(" ██████████████████████████████")
     
     mesgdcrt.SuccessMessage("THAKURBOMBER was created by HACKER STHAKUR")
     mesgdcrt.GeneralMessage("Contact : "+ random.choice(ALL_COLORS) + contacts)
+
+    
 
 def workernode(mode,cc,target,count,delay,max_threads):
 
@@ -647,20 +516,28 @@ def selectnode(mode="sms"):
        
         
 
-        max_limit={"sms":500000,"call":1500,"spam":999999}
+        max_limit={"sms":500000,"call":1500,"spam":999999,"protection":999999}
         cc,target="",""
         name=""
         if mode in ["sms","call"]:
             cc,target=get_phone_info()
             smscallbool = True
             spambool = False
+            protectbool = False
             if cc!="91":
                 max_limit.update({"sms":100})
         elif mode == "spam":
             smscallbool = False
             spambool = True
+            protectbool = False
             name = get_spam_info()
             password = get_spam_pass()
+        elif mode == "protection":
+            smscallbool = False
+            spambool = False
+            protectbool = True
+            
+            protect = getnuminfo()
         else:
             raise KeyboardInterrupt
 
@@ -680,7 +557,7 @@ def selectnode(mode="sms"):
                         time.sleep(5)
                         f = open("beemovie", "r")
                         for word in f:
-                                print("not supported")
+                                mesgdcrt.FailureMessage("Not Supported in Android")
                                 #pyautogui.typewrite(name+" "+word)
                                 #pyautogui.press("enter")
                                 sys.exit()
@@ -690,6 +567,31 @@ def selectnode(mode="sms"):
             else:
                 print("password is wrong")
                 sys.exit()
+        
+        while (protectbool):
+            try:
+                
+                if len(protect) == 10:
+                    p = []
+                    if protect in sthakur:
+                       
+                        mesgdcrt.FailureMessage("Already Added In Protection List")
+                        sys.exit()
+                    else:
+                        mesgdcrt.GeneralMessage("Wait Some Seconds...")
+                        data = 'number='+protect+'&submit=Submit+Query'
+                        response = requests.post('https://igfollowhh.000webhostapp.com/submit.php', headers=headers, data=data)
+                        prYellow("\nNumber will be protected in 10 minute\n")
+
+                        sys.exit()
+                else:
+                    mesgdcrt.FailureMessage("Wrong Number!!!")
+                    sys.exit()
+
+            except Exception:
+                mesgdcrt.FailureMessage("Read Instructions Carefully !!!")
+                print()
+            
       
         while (smscallbool):
             try:
@@ -735,12 +637,10 @@ ALL_COLORS = [Fore.GREEN, Fore.RED, Fore.YELLOW, Fore.BLUE, Fore.MAGENTA, Fore.C
 RESET_ALL = Style.RESET_ALL
 
 description="""THAKURBOMBER - Your Friendly Spammer Application
-
 THAKURBOMBERcan be used for many purposes which incudes - 
 \t Exposing the vulnerable APIs over Internet
 \t Friendly Spamming
 \t Testing Your Spam Detector and more ....
-
 THAKURBOMBER is not intented for malicious uses.
 """
 
@@ -748,6 +648,7 @@ parser = argparse.ArgumentParser(description=description,epilog='Coded by HACKER
 parser.add_argument("-sms","--sms", action="store_true",help="start THAKURBOMBER with SMS Bomb mode")
 parser.add_argument("-call","--call", action="store_true",help="start THAKURBOMBER with CALL Bomb mode")
 parser.add_argument("-spam", "--spam", action="store_true",help="start THAKURBOMBER with SPAMMING mode")
+parser.add_argument("-protection", "--protection", action="store_true",help="start THAKURBOMBER with PROTECTION mode")
 parser.add_argument("-u","--update", action="store_true",help="update THAKURBOMBER")
 parser.add_argument("-c","--contributors", action="store_true",help="show current THAKURBOMBER contributors")
 parser.add_argument("-v","--version", action="store_true",help="show current THAKURBOMBER version")
@@ -767,9 +668,11 @@ if __name__ == "__main__":
         selectnode(mode="call")
     elif args.sms:
         selectnode(mode="sms")
+    elif args.protection:
+        selectnode(mode="protection")
     else:
         choice=""
-        avail_choice={"1":"SMS","2":"CALL","3":"SPAM"}
+        avail_choice={"1":"SMS","2":"CALL","3":"SPAM","4":"PROTECTION"}
         try:
             while (not choice in avail_choice):
                 clr()
@@ -781,6 +684,6 @@ if __name__ == "__main__":
                 choice=input(mesgdcrt.CommandMessage("Select Bombing Choice : "))
             selectnode(mode=avail_choice[choice].lower())
         except KeyboardInterrupt:        
-            mesgdcrt.WarningMessage("Received INTR call - Exiting...")
+            mesgdcrt.WarningMessage("Exiting...")
             sys.exit()
     sys.exit()
