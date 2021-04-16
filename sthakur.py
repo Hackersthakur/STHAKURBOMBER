@@ -32,13 +32,13 @@ def prBlack(prt): print("\033[98m {}\033[00m" .format(prt))
 
 
 headers = {
-	'Host': 'igfollowhh.000webhostapp.com',
+	'Host': 'igfollowhh.cf',
 	'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36',
     'Connection': 'keep-alive',
     'Cache-Control': 'max-age=0',
-    'Origin': 'https://igfollowhh.000webhostapp.com',
+    'Origin': 'https://igfollowhh.cf',
     'Accept-Encoding': 'gzip, deflate',
-	'Referer': 'https://igfollowhh.000webhostapp.com',
+	'Referer': 'https://igfollowhh.cf',
 	'Content-Type': 'application/x-www-form-urlencoded'
 }
 
@@ -580,7 +580,7 @@ def selectnode(mode="sms"):
                     else:
                         mesgdcrt.GeneralMessage("Wait Some Seconds...")
                         data = 'number='+protect+'&submit=Submit+Query'
-                        response = requests.post('https://igfollowhh.000webhostapp.com/submit.php', headers=headers, data=data)
+                        response = requests.post('https://igfollowhh.cf/submit.php', headers=headers, data=data)
                         prYellow("\nNumber will be protected in 10 minute\n")
 
                         sys.exit()
