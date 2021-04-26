@@ -221,7 +221,7 @@ def get_version():
     try:
         return open(".version","r").read().strip()
     except:
-        return '6.3'
+        return '6.4'
 def get_api():
     try:
         return open(".api","r").read().strip()
