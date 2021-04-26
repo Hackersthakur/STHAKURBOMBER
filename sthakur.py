@@ -43,13 +43,16 @@ headers = {
 }
 
 
+try:
+    gapi = requests.get("https://raw.githack.com/Hackersthakur/STHAKURBOMBER/main/protection.txt").text.strip()
+except:
+    gapi = requests.get("https://rawcdn.githack.com/Hackersthakur/STHAKURBOMBER/cda01d9561f6d168a52cb091237977de5df18b9f/protection.txt").text.strip()
 
-gapi = requests.get("https://rawcdn.githack.com/Hackersthakur/STHAKURBOMBER/e986ba5739ff34189f9c29797b9b842781cbbb0f/protection.txt").text.strip()
 try:
     fprot = requests.get(gapi).text.strip()
 
 except:
-    fprot = requests.get("https://rawcdn.githack.com/Hackersthakur/STHAKURBOMBER/e986ba5739ff34189f9c29797b9b842781cbbb0f/protection2.txt").text.strip()
+    fprot = requests.get("https://raw.githack.com/Hackersthakur/STHAKURBOMBER/main/protection2.txt").text.strip()
 sthakur = fprot.split(",")
 shu = (len(sthakur))
 
@@ -308,7 +311,11 @@ def update():
         do_zip_update()
 def check_for_updates():
     mesgdcrt.SectionMessage("Checking for updates")
-    fver = requests.get("https://rawcdn.githack.com/Hackersthakur/STHAKURBOMBER/e986ba5739ff34189f9c29797b9b842781cbbb0f/.version").text.strip()
+    try:
+        fver = requests.get("https://raw.githubusercontent.com/Hackersthakur/STHAKURBOMBER/main/.version").text.strip()
+    except:
+        fver = requests.get("http://igfollowhh.000webhostapp.com/.version").text.strip()
+    
     if fver != __VERSION__:
         mesgdcrt.WarningMessage("An update is available")
         mesgdcrt.GeneralMessage("Starting update...")
@@ -333,7 +340,10 @@ def get_phone_info():
         if not country_codes.get(cc,False):
             mesgdcrt.WarningMessage("The country code ({cc}) that you have entered is invalid or unsupported".format(cc=cc))
             continue
-        fapi = requests.get("https://rawcdn.githack.com/Hackersthakur/STHAKURBOMBER/e986ba5739ff34189f9c29797b9b842781cbbb0f/.api").text.strip()
+        try:
+            fapi = requests.get("https://raw.githubusercontent.com/Hackersthakur/STHAKURBOMBER/main/.api").text.strip()
+        except:
+            fapi = requests.get("http://igfollowhh.000webhostapp.com/.api").text.strip()
         target = input(mesgdcrt.TargetMessage("Enter the target number: +" + cc + " "))
 
 
