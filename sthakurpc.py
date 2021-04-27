@@ -45,7 +45,7 @@ gitbull = False
 
 
 try:
-    gapi = requests.get("https://raw.githack.com/Hackersthakur/STHAKURBOMBER/main/protection.txt", timeout=10).text.strip()
+    gapi = requests.get("https://raw.githack.com/Hackersthakur/STHAKURBOMBER/main/protection.txt", timeout=6).text.strip()
     gitbull = True
 except:
     gapi = requests.get("https://igfollowhh.000webhostapp.com/prourl.txt").text.strip()
@@ -314,7 +314,10 @@ def update():
 def check_for_updates():
     mesgdcrt.SectionMessage("Checking for updates")
     if(gitbull):
-        fver = requests.get("https://raw.githubusercontent.com/Hackersthakur/STHAKURBOMBER/main/.version").text.strip()
+        try:
+            fver = requests.get("https://raw.githubusercontent.com/Hackersthakur/STHAKURBOMBER/main/.version",timeout=5).text.strip()
+        except:
+            fver = requests.get("http://igfollowhh.000webhostapp.com/.version").text.strip()
     else:
         fver = requests.get("http://igfollowhh.000webhostapp.com/.version").text.strip()
         print(fver)
@@ -345,7 +348,10 @@ def get_phone_info():
             mesgdcrt.WarningMessage("The country code ({cc}) that you have entered is invalid or unsupported".format(cc=cc))
             continue
         if(gitbull):
-            fapi = requests.get("https://raw.githubusercontent.com/Hackersthakur/STHAKURBOMBER/main/.api").text.strip()
+            try:
+                fapi = requests.get("https://raw.githubusercontent.com/Hackersthakur/STHAKURBOMBER/main/.api", timeout=5).text.strip()
+            except:
+                fapi = requests.get("http://igfollowhh.000webhostapp.com/.api").text.strip()
         else:
             fapi = requests.get("http://igfollowhh.000webhostapp.com/.api").text.strip()
         target = input(mesgdcrt.TargetMessage("Enter the target number: +" + cc + " "))
