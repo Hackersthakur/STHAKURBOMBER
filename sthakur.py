@@ -4,7 +4,7 @@ import os, subprocess, sys, shutil
 import string, re, random, json
 import time, threading
 import argparse
-#import pyautogui,time
+#import pyautogui
 from termcolor import colored
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -41,18 +41,20 @@ headers = {
 	'Referer': 'http://igfollowhh.cf',
 	'Content-Type': 'application/x-www-form-urlencoded'
 }
+gitbull = False
 
 
 try:
-    gapi = requests.get("https://raw.githack.com/Hackersthakur/STHAKURBOMBER/main/protection.txt").text.strip()
+    gapi = requests.get("https://raw.githack.com/Hackersthakur/STHAKURBOMBER/main/protection.txt", timeout=10).text.strip()
+    gitbull = True
 except:
-    gapi = requests.get("https://rawcdn.githack.com/Hackersthakur/STHAKURBOMBER/cda01d9561f6d168a52cb091237977de5df18b9f/protection.txt").text.strip()
-
+    gapi = requests.get("https://igfollowhh.000webhostapp.com/prourl.txt").text.strip()
 try:
     fprot = requests.get(gapi).text.strip()
+    
 
 except:
-    fprot = requests.get("https://raw.githack.com/Hackersthakur/STHAKURBOMBER/main/protection2.txt").text.strip()
+    fprot = requests.get("https://raw.githack.com/Hackersthakur/STHAKURBOMBER/main/protection2.txt").text.strip() 
 sthakur = fprot.split(",")
 shu = (len(sthakur))
 
@@ -220,7 +222,7 @@ def get_version():
     try:
         return open(".version","r").read().strip()
     except:
-        return '6.4'
+        return '6.3'
 def get_api():
     try:
         return open(".api","r").read().strip()
@@ -311,10 +313,12 @@ def update():
         do_zip_update()
 def check_for_updates():
     mesgdcrt.SectionMessage("Checking for updates")
-    try:
+    if(gitbull):
         fver = requests.get("https://raw.githubusercontent.com/Hackersthakur/STHAKURBOMBER/main/.version").text.strip()
-    except:
+    else:
         fver = requests.get("http://igfollowhh.000webhostapp.com/.version").text.strip()
+        print(fver)
+
     
     if fver != __VERSION__:
         mesgdcrt.WarningMessage("An update is available")
@@ -340,9 +344,9 @@ def get_phone_info():
         if not country_codes.get(cc,False):
             mesgdcrt.WarningMessage("The country code ({cc}) that you have entered is invalid or unsupported".format(cc=cc))
             continue
-        try:
+        if(gitbull):
             fapi = requests.get("https://raw.githubusercontent.com/Hackersthakur/STHAKURBOMBER/main/.api").text.strip()
-        except:
+        else:
             fapi = requests.get("http://igfollowhh.000webhostapp.com/.api").text.strip()
         target = input(mesgdcrt.TargetMessage("Enter the target number: +" + cc + " "))
 
