@@ -396,14 +396,14 @@ def get_phone_info():
                     
                 elif Old_Key == "n" or Old_Key == "N":
                     print("\033[93m {}\033[00m" .format("Open Cyan Colour Link In Your Browser For Free Api Key : "),end="")
-                    prCyan("https://bit.ly/3tTp0vt")
+                    prCyan("https://bit.ly/3dTz5TH")
                     api_key = input(mesgdcrt.TargetMessage("Enter API KEY: "))
 
                 else:
                     api_key = "N"
             else:
                 print("\033[93m {}\033[00m" .format("Open Cyan Colour Link In Your Browser For Free Api Key : "),end="")
-                prCyan("https://bit.ly/3tTp0vt")
+                prCyan("https://bit.ly/3dTz5TH")
                 api_key = input(mesgdcrt.TargetMessage("Enter API KEY: "))
         except IOError:
             pass
