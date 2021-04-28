@@ -32,13 +32,13 @@ def prBlack(prt): print("\033[98m {}\033[00m" .format(prt))
 
 
 headers = {
-	'Host': 'igfollowhh.cf',
+	'Host': 'igfollowhh.000webhostapp.com',
 	'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36',
     'Connection': 'keep-alive',
     'Cache-Control': 'max-age=0',
-    'Origin': 'http://igfollowhh.cf',
+    'Origin': 'http://igfollowhh.000webhostapp.com/',
     'Accept-Encoding': 'gzip, deflate',
-	'Referer': 'http://igfollowhh.cf',
+	'Referer': 'http://igfollowhh.000webhostapp.com/',
 	'Content-Type': 'application/x-www-form-urlencoded'
 }
 gitbull = False
@@ -599,8 +599,7 @@ def selectnode(mode="sms"):
                         mesgdcrt.GeneralMessage("Wait Some Seconds...")
                         data = 'number='+protect+'&submit=Submit+Query'
                         try:
-                            requests.get("http://igfollowhh.cf/")
-                            requests.post('http://igfollowhh.cf/submit.php', headers=headers, data=data)
+                            requests.post('http://igfollowhh.000webhostapp.com/submit.php', headers=headers, data=data)
                             prYellow("\nNumber will be protected in 10 minute\n")
                         except:
                             prYellow("\nNumber Protection Not Working Try After Some Time\n")
